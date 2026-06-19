@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Handcrafted Malaysian Sape - Heritage Masterpieces</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header id="header">
+      <div class="logo-container">
+        <img
+          id="header-img"
+          src="https://cdn.freecodecamp.org/testable-projects-fcc/images/product-landing-page-logo.png"
+          alt="Malaysian Sape Heritage Logo"
+        />
+        <span class="logo-text">Malaysian Sape</span>
+      </div>
+      <nav id="nav-bar">
+        <a class="nav-link" href="#features">Features</a>
+        <a class="nav-link" href="#how-it-works">How It Works</a>
+        <a class="nav-link" href="#pricing">Pricing</a>
+      </nav>
+    </header>
+
+    <main>
+      <section id="hero">
+        <h2>Handcrafted, Malaysian-made Masterpieces</h2>
+        <p class="hero-desc">Experience the enchanting, therapeutic sound of the traditional Borneo Sape, intricately hand-carved by local master artisans.</p>
+        <form id="form" action="https://www.freecodecamp.org/email-submit">
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="Enter your email address"
+            required
+          />
+          <input type="submit" id="submit" value="Get Started" />
+        </form>
+      </section>
+
+      <section id="features">
+        <div class="feature-card">
+          <h3>Premium Heritage Woods</h3>
+          <p>Each Sape is carved out of premium local Adau or Mahogany wood to ensure rich, resonance sounds and a long-lasting lifespan.</p>
+        </div>
+        <div class="feature-card">
+          <h3>Authentic Indigenous Carvings</h3>
+          <p>The intricate artwork and traditional motifs on the body are meticulously hand-drawn and engraved by local heritage craftsmen.</p>
+        </div>
+      </section>
+
+      <section id="how-it-works">
+        <div class="video-container">
+          <iframe
+            id="video"
+            src="https://www.youtube.com/embed/yYE_DqFggTg"
+            title="The Story and Craft of Malaysian Sape"
+            allowfullscreen
+          ></iframe>
+        </div>
+      </section>
+
+      <section id="pricing">
+        
+        <div class="product">
+          <div class="product-header">
+            <h3>Student Sape</h3>
+          </div>
+          <div class="product-body">
+            <div class="price">RM 1,200</div>
+            <ul class="features-list">
+              <li>Good for beginners</li>
+              <li>Lightweight Meranti wood</li>
+              <li>Easy to tune and play</li>
+              <li>Nice and shiny finish</li>
+            </ul>
+            <button type="button" class="btn-select btn-teal" onclick="buyProduct('Student Sape')">Select Product</button>
+          </div>
+        </div>
+
+        <div class="product best-seller">
+          <div class="product-header">
+            <h3>Classic Sape</h3>
+          </div>
+          <div class="product-body">
+            <div class="price">RM 2,500</div>
+            <ul class="features-list">
+              <li>Sound quality unmatched</li>
+              <li>Premium Mahogany Edition</li>
+              <li>Authentic cultural carvings</li>
+              <li>Durable and long lasting</li>
+            </ul>
+            <button type="button" class="btn-select btn-gold" onclick="buyProduct('Classic Sape')">Select Product</button>
+          </div>
+        </div>
+
+        <div class="product">
+          <div class="product-header">
+            <h3>Royal Sape</h3>
+          </div>
+          <div class="product-body">
+            <div class="price">RM 4,800</div>
+            <ul class="features-list">
+              <li>Masterpiece by Senior Artisan</li>
+              <li>Aged Fine Adau Wood</li>
+              <li>Intricate gold leaf inlay</li>
+              <li>Beautiful professional sound</li>
+            </ul>
+            <button type="button" class="btn-select btn-teal" onclick="buyProduct('Premium Royal Sape')">Select Product</button>
+          </div>
+        </div>
+
+      </section>
+    </main>
+
+    <script>
+      function buyProduct(productName) {
+        alert("Excellent choice! The " + productName + " has been selected. Proceeding to checkout...");
+      }
+    </script>
+  </body>
+</html>
