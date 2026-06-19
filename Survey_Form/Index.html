@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Malaysian Travel Survey - Heritage Edition</title>
+</head>
+<body>
+
+    <h1 id="title">Malaysian Travel Survey</h1>
+    
+    <p id="description">Thank you for sharing your authentic travel experiences in Malaysia with us!</p>
+
+    <form id="survey-form">
+        
+        <div>
+            <label id="name-label" for="name">Full Name</label><br>
+            <input id="name" type="text" placeholder="Enter your full name" required>
+        </div>
+        <br>
+
+        <div>
+            <label id="email-label" for="email">Email Address</label><br>
+            <input id="email" type="email" placeholder="example@mail.com" required>
+        </div>
+        <br>
+
+        <div>
+            <label id="number-label" for="number">Times Visited Malaysia (Age or Total Trips)</label><br>
+            <input id="number" type="number" min="1" max="99" placeholder="Enter a number (1-99)">
+        </div>
+        <br>
+
+        <div>
+            <label for="dropdown">Which region in Malaysia is your favorite destination?</label><br>
+            <select id="dropdown" required>
+                <option disabled selected value="">Select a region...</option>
+                <option value="peninsular-west">West Coast (KL, Penang, Melaka)</option>
+                <option value="peninsular-east">East Coast (Terengganu, Kelantan, Pahang)</option>
+                <option value="borneo">Borneo Heritage (Sabah & Sarawak)</option>
+                <option value="islands">Tropical Islands (Langkawi, Redang, Perhentian)</option>
+            </select>
+        </div>
+        <br>
+
+        <div>
+            <label>How do you usually prefer to travel around Malaysia?</label><br>
+            <input name="travel-style" value="backpacking" type="radio"> Backpacking / Solo<br>
+            <input name="travel-style" value="family-package" type="radio"> Family Vacation Package<br>
+            <input name="travel-style" value="roadtrip" type="radio"> Road Trip with Friends<br>
+        </div>
+        <br>
+
+        <div>
+            <label>What cultural or travel elements interest you most? (Select all that apply):</label><br>
+            <input type="checkbox" value="cuisine" name="interests"> Traditional Malaysian Cuisine<br>
+            <input type="checkbox" value="rainforest" name="interests"> Rainforest & Eco-Tourism<br>
+            <input type="checkbox" value="history" name="interests"> Historical Sites & Architecture<br>
+            <input type="checkbox" value="festivals" name="interests"> Cultural Festivals & Arts<br>
+        </div>
+        <br>
+
+        <div>
+            <label for="comments">Any traditional tips or feedback for future travelers?</label><br>
+            <textarea id="comments" name="user-feedback" rows="5" cols="40" placeholder="Share your experience here..."></textarea>
+        </div>
+        <br>
+
+        <div>
+            <button id="submit" type="submit">
