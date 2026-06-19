@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MyDigital ID Integration Guide</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <nav id="navbar">
+      <header>MyDigital ID API</header>
+      <a class="nav-link" href="#Introduction_to_MyDigital_ID">Introduction to MyDigital ID</a>
+      <a class="nav-link" href="#What_you_should_already_know">What you should already know</a>
+      <a class="nav-link" href="#Prerequisites_for_Developers">Prerequisites for Developers</a>
+      <a class="nav-link" href="#SDK_Installation_Methods">SDK Installation Methods</a>
+      <a class="nav-link" href="#User_Authentication_Flow">User Authentication Flow</a>
+      <a class="nav-link" href="#Response_Data_Structure">Response Data Structure</a>
+      <a class="nav-link" href="#API_Endpoint_Verification">API Endpoint Verification</a>
+      <a class="nav-link" href="#Reference">Reference</a>
+    </nav>
+
+    <main id="main-doc">
+      
+      <section class="main-section" id="Introduction_to_MyDigital_ID">
+        <header>Introduction to MyDigital ID</header>
+        <p>MyDigital ID is the official national digital identity platform developed for the citizens and residents of Malaysia. It serves as a secure, centralized, and highly sophisticated authentication ecosystem that eliminates the need for multiple usernames and passwords across various digital platforms.</p>
+        <p>By establishing a single trusted identity verifier, this platform empowers individuals to seamlessly log into both federal government portals and participating private sector applications. The infrastructure is highly scalable, designed to support millions of concurrent transactions while ensuring data privacy is maintained at the highest national standards.</p>
+        <p>As Malaysia accelerates its digital economy transformation, MyDigital ID plays a pivotal role in fostering a secure online environment, reducing identity theft, and streamlining digital interactions for businesses, government agencies, and the general public alike.</p>
+      </section>
+
+      <section class="main-section" id="What_you_should_already_know">
+        <header>What you should already know</header>
+        <p>Before diving into the technical integration of MyDigital ID within your enterprise software or web services, developers are highly encouraged to possess a solid baseline understanding of modern web architectures and cryptographic protocols.</p>
+        <p>Having prior experience in these core areas will drastically reduce your development timeline and help ensure your implementation adheres to strict security guardrails:</p>
+        <ul>
+          <li>A strong grasp of the OpenID Connect (OIDC) framework and OAuth 2.0 authorization flows.</li>
+          <li>Familiarity with token-based authentication concepts, specifically JSON Web Tokens (JWT).</li>
+          <li>Experience in managing server-side secure environment variables, API secrets, and private-public key pairs.</li>
+          <li>Basic knowledge of web application security hazards, including cross-site scripting (XSS) and token interception methods.</li>
+        </ul>
+      </section>
+
+      <section class="main-section" id="Prerequisites_for_Developers">
+        <header>Prerequisites for Developers</header>
+        <p>Before integrating the national identity system into your application, ensure you meet the following baseline requirements:</p>
+        <p>Here are the core security parameters and credentials required by the Malaysian digital gateway:</p>
+        <ul>
+          <li>An active Malaysian Government Developer Center (MGD) merchant account.</li>
+          <li>A valid SSL/TLS certificate installed on your production server.</li>
+          <li>A unique API Client ID and Secret Key generated via the administrator dashboard.</li>
+        </ul>
+        <code>let encryptionMode = "AES_256_GCM";</code>
+      </section>
+
+      <section class="main-section" id="SDK_Installation_Methods">
+        <header>SDK Installation Methods</header>
+        <p>To speed up development, the government core team maintains modern software development kits (SDKs).</p>
+        <p>You can install the official package directly into your web framework using standard package managers:</p>
+        <code>npm install @mydigitalid/core-sdk</code>
+      </section>
+
+      <section class="main-section" id="User_Authentication_Flow">
+        <header>User Authentication Flow</header>
+        <p>The system utilizes a secure OpenID Connect protocol to verify the identity of the user via biometric scanners or mobile pins.</p>
+        <p>To initiate the secure login challenge, your web application must execute the following primary initiation function:</p>
+        <code>MyDigitalID.initializeSecureChallenge({ clientId: "MY_APP_01" });</code>
+      </section>
+
+      <section class="main-section" id="Response_Data_Structure">
+        <header>Response Data Structure</header>
+        <p>Upon successful authentication, the Malaysian central server will return an encrypted token payload back to your server.</p>
+        <p>The decrypted payload will strictly provide verified demographic information associated with the national database.</p>
+        <code>var userPayload = { country: "Malaysia", citizenStatus: true };</code>
+      </section>
+
+      <section class="main-section" id="API_Endpoint_Verification">
+        <header>API Endpoint Verification</header>
+        <p>To ensure that your network traffic is routing directly to the authentic national gateway, developers must bind their production environment requests to the designated verification address.</p>
+        <p>Always perform a standard ping test or diagnostic request to the production URI string during the staging deployment phase:</p>
+        <code>const productionGatewayURI = "https://api.mydigitalid.gov.my/v1/verify";</code>
+      </section>
+
+      <section class="main-section" id="Reference">
+        <header>Reference</header>
+        <ul>
+          <li>All the technological frameworks and integration criteria on this page are adapted from the official portal of <a href="https://www.malaysia.gov.my" target="_blank">MyGovernment</a>.</li>
+          <li>For detailed developer standards, please review the centralized repository core guides provided by <a href="https://github.com" target="_blank">MIMOS Open Source Systems</a>.</li>
+        </ul>
+      </section>
+      
+    </main>
+  </body>
+</html>
